@@ -65,7 +65,7 @@ try:
     
     # Try to use gemini-1.5-pro-latest first, fallback to gemini-pro
     try:
-        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        model = genai.GenerativeModel('gemini-2.5-flash')
     except:
         try:
             model = genai.GenerativeModel('gemini-pro')
@@ -988,7 +988,7 @@ else:
         - ✅ Provide accessibility for low-resource areas
         
         ### Technology Stack:
-        - **AI Model**: Google Gemini 2.5 Pro
+        - **AI Model**: Google gemini-2.5-flash
         - **Framework**: Streamlit
         - **Language**: Python
         
