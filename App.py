@@ -239,6 +239,7 @@ else:
                 6. Add signs to watch for that require medical attention
                 7. Suggest cross-training activities that are safe
                 8. Include timeline for progression to next phase
+                9. Response should be around 200-250 words
                 
                 Prioritize safety and gradual progression. Include specific exercises with modifications.
                 """
@@ -313,7 +314,7 @@ else:
                 5. Include communication cues for teammates
                 6. Add common mistakes to avoid
                 7. Provide progression from practice to match application
-                
+                8. Response should be around 200-250 words
                 Make the tips practical, actionable, and appropriate for the experience level.
                 Use coaching language that motivates and educates.
                 """
@@ -393,6 +394,7 @@ else:
                 7. Suggest healthy snack options
                 8. Add supplement recommendations (if appropriate for age)
                 9. Include portion sizes and preparation tips
+                10. Response should be around 200-250 words
                 
                 All recommendations must be age-appropriate and safe for youth athletes.
                 Focus on whole foods and balanced nutrition.
@@ -467,7 +469,7 @@ else:
                 6. Add safety cues and common mistakes to avoid
                 7. Include breathing techniques where applicable
                 8. Provide modifications for any sensitive areas
-                
+                9. Response should be around 200-250 words
                 Make the routine practical and easy to follow. Use bullet points and clear numbering.
                 """
                 
@@ -543,7 +545,7 @@ else:
                 7. Add techniques for managing pressure and anxiety
                 8. Provide recovery mental practices
                 9. Include progress tracking methods
-                
+                10. Response should be around 200-250 words 
                 Make the program practical and age-appropriate for young athletes.
                 Include specific examples and scenarios.
                 """
@@ -611,7 +613,7 @@ else:
                 8. Provide hydration for different weather conditions
                 9. Create a daily hydration timeline
                 10. Add tips for carrying and consuming fluids during matches
-                
+                11. Response should be around 200-250 words 
                 Make recommendations practical for young athletes. Include timing and quantities.
                 """
                 
@@ -689,7 +691,7 @@ else:
                 8. Include quick 2-3 minute visualization options
                 9. Provide tips for effective visualization practice
                 10. Add confidence-building visualization exercises
-                
+                12. Response should be around 200-250 words
                 Write the visualization script in first person, guiding the athlete through each step.
                 Make it engaging and emotionally positive.
                 """
@@ -763,7 +765,7 @@ else:
                 5. Include scoring or measurement methods
                 6. Provide common mistakes and corrections
                 7. Add competitive elements where appropriate
-                
+                8. Response should be around 200-250 words 
                 Focus on developing quick, smart decisions in game-like situations.
                 Make drills engaging and challenging for the skill level.
                 """
@@ -839,7 +841,7 @@ else:
                 8. Provide modifications for any injury history
                 9. Add stretches for tight muscle groups
                 10. Include functional mobility movements relevant to sports
-                
+                11. Response should be around 200-250 words 
                 Prioritize safe, effective movements. Explain the 'why' behind each exercise.
                 """
                 
