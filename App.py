@@ -159,7 +159,9 @@ else:
                 5. Include progressive overload principles
                 6. Provide clear instructions for each exercise
                 7. Add intensity scales (RPE) for each session
-                8. Response should be around 400-500 words
+                8. Response should be around 250-300 words
+                9.Table is must in the workout plan
+                
                 
                 Format the output in a clear, organized structure with weekly overview and daily breakdowns.
                 Include safety warnings where applicable.
