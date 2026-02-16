@@ -7,15 +7,15 @@ from datetime import datetime
 import json
 import os
 
-# Page Configuration
+
 st.set_page_config(
-    page_title="CoachBot A - AI Fitness Assistant",
+    page_title="CoachBot  - AI Fitness Assistant",
     page_icon="💪",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
+
 st.markdown("""
 <style>
     .main-header {
@@ -54,16 +54,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Initialize session state
+
 if 'api_key_configured' not in st.session_state:
     st.session_state.api_key_configured = False
 
-# Get API key from Streamlit secrets (automatic)
+
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
     
-    # Try to use gemini-1.5-pro-latest first, fallback to gemini-pro
+    
     try:
         model = genai.GenerativeModel('gemini-2.5-flash')
     except:
@@ -74,21 +74,20 @@ try:
     
     st.session_state.model = model
     st.session_state.api_key_configured = True
-    st.session_state.temperature = 0.7  # Fixed temperature
+    st.session_state.temperature = 0.7  
     st.session_state.model_name = model.model_name
 except Exception as e:
     st.error(f"❌ Error: {str(e)}")
     st.info("💡 Make sure you have a valid Gemini API key added to Streamlit secrets.")
     st.session_state.api_key_configured = False
 
-# Sidebar - Configuration
+
 with st.sidebar:
     st.title("🔧 CoachBot A")
     st.success("✅ API Key configured from secrets")
     
     st.divider()
     
-    # Fixed temperature display (read-only)
     st.info("⚙️ Model Settings")
     st.write(f"**Temperature:** {st.session_state.temperature} (Fixed)")
     st.write("*Consistent, balanced recommendations*")
@@ -97,23 +96,21 @@ with st.sidebar:
         st.divider()
         st.write(f"**Model:** {st.session_state.model_name}")
 
-# Main App
+
 if not st.session_state.api_key_configured:
     st.warning("⚠️ Please add GEMINI_API_KEY to Streamlit secrets to continue.")
 else:
-    st.markdown('<div class="main-header">💪 CoachBot A - Your AI Personal Fitness Coach</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">💪 CoachBot  - Your AI Personal Fitness Coach</div>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center; font-size: 1.1rem;">Empowering young athletes with personalized, AI-powered coaching</p>', unsafe_allow_html=True)
     
-    # Tabs for different features
+    
     tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
         "🏋️ Workout Plan", "🏥 Recovery", "🎯 Tactical Tips", "🥗 Nutrition Guide", 
         "🔥 Warm-up/Cool-down", "🧠 Mental Training", "💧 Hydration", "👁️ Visualization",
         "📍 Position Drills", "🧘 Mobility", "📊 Dashboard"
     ])
     
-    # ============================================
-    # TAB 1: Full-Body Workout Plan Generator
-    # ============================================
+
     with tab1:
         st.markdown('<div class="sub-header">🏋️ Full-Body Workout Plan Generator</div>', unsafe_allow_html=True)
         
@@ -187,9 +184,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating workout plan: {e}")
     
-    # ============================================
-    # TAB 2: Recovery Training Schedule
-    # ============================================
+
     with tab2:
         st.markdown('<div class="sub-header">🏥 Safe Recovery Training Schedule</div>', unsafe_allow_html=True)
         
@@ -264,9 +259,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating recovery plan: {e}")
     
-    # ============================================
-    # TAB 3: Tactical Coaching Tips
-    # ============================================
+
     with tab3:
         st.markdown('<div class="sub-header">🎯 Tactical Coaching Tips</div>', unsafe_allow_html=True)
         
@@ -339,9 +332,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating tactical tips: {e}")
     
-    # ============================================
-    # TAB 4: Nutrition Guide Generator
-    # ============================================
+
     with tab4:
         st.markdown('<div class="sub-header">🥗 Personalized Nutrition Guide</div>', unsafe_allow_html=True)
         
@@ -420,9 +411,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating nutrition plan: {e}")
     
-    # ============================================
-    # TAB 5: Warm-up and Cool-down Routines
-    # ============================================
+
     with tab5:
         st.markdown('<div class="sub-header">🔥 Warm-up & Cool-down Routines</div>', unsafe_allow_html=True)
         
@@ -493,9 +482,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating routine: {e}")
     
-    # ============================================
-    # TAB 6: Mental Focus & Training Routines
-    # ============================================
+
     with tab6:
         st.markdown('<div class="sub-header">🧠 Mental Training & Focus Routines</div>', unsafe_allow_html=True)
         
@@ -570,9 +557,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating mental training: {e}")
     
-    # ============================================
-    # TAB 7: Hydration & Electrolyte Strategies
-    # ============================================
+    
     with tab7:
         st.markdown('<div class="sub-header">💧 Hydration & Electrolyte Strategy</div>', unsafe_allow_html=True)
         
@@ -637,9 +622,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating hydration plan: {e}")
     
-    # ============================================
-    # TAB 8: Pre-Match Visualization
-    # ============================================
+
     with tab8:
         st.markdown('<div class="sub-header">👁️ Pre-Match Visualization Techniques</div>', unsafe_allow_html=True)
         
@@ -716,9 +699,7 @@ else:
                 except Exception as e:
                     st.error(f"Error generating visualization guide: {e}")
     
-    # ============================================
-    # TAB 9: Position-Specific Decision Drills
-    # ============================================
+ 
     with tab9:
         st.markdown('<div class="sub-header">📍 Position-Specific Decision Drills</div>', unsafe_allow_html=True)
         
@@ -790,9 +771,6 @@ else:
                 except Exception as e:
                     st.error(f"Error generating drills: {e}")
     
-    # ============================================
-    # TAB 10: Mobility & Post-Injury Workouts
-    # ============================================
     with tab10:
         st.markdown('<div class="sub-header">🧘 Mobility & Recovery Workouts</div>', unsafe_allow_html=True)
         
@@ -865,13 +843,11 @@ else:
                 except Exception as e:
                     st.error(f"Error generating mobility program: {e}")
     
-    # ============================================
-    # TAB 11: Dashboard
-    # ============================================
+
     with tab11:
         st.markdown('<div class="sub-header">📊 CoachBot Dashboard</div>', unsafe_allow_html=True)
         
-        # Session Statistics
+        
         st.subheader("📈 Session Overview")
         
         col1, col2, col3 = st.columns(3)
@@ -884,7 +860,7 @@ else:
         
         st.divider()
         
-        # Feature Summary
+        
         st.subheader("🎯 Available Features")
         
         features_data = {
@@ -931,7 +907,7 @@ else:
         
         st.divider()
         
-        # Tips Section
+        
         st.subheader("💡 Pro Tips for Best Results")
         
         col1, col2 = st.columns(2)
@@ -964,7 +940,6 @@ else:
         
         st.divider()
         
-        # Sports Covered
         st.subheader("🏅 Supported Sports")
         
         sports_list = [
@@ -980,41 +955,39 @@ else:
         
         st.divider()
         
-        # About the App
+        
         st.subheader("ℹ️ About CoachBot A")
         
         st.markdown("""
-        **CoachBot A** is an AI-powered personal fitness coaching assistant designed specifically for young athletes (ages 10-25).
+        **CoachBot ** is an AI-powered personal fitness coaching assistant designed specifically for young athletes (ages 10-25).
         
-        ### Key Objectives:
+       
         - ✅ Empower youth with AI-based personal training
         - ✅ Generate adaptive fitness routines based on physical condition
         - ✅ Encourage safety, motivation, and nutrition awareness
         - ✅ Provide accessibility for low-resource areas
         
-        ### Technology Stack:
+       
         - **AI Model**: Google gemini-2.5-flash
         - **Framework**: Streamlit
         - **Language**: Python
         
-        ### Safety Features:
+      
         - Injury-aware exercise modifications
         - Age-appropriate recommendations
         - Progressive training principles
         - Medical disclaimer for all content
         
-        ### Developed For:
         - Young athletes seeking personalized coaching
         - Youth sports programs
         - Schools and sports academies
         - Under-resourced communities with limited coaching access
         """)
 
-# Footer
 st.divider()
 st.markdown("""
 <div style='text-align: center; color: #666;'>
-    <p>💪 <strong>CoachBot A</strong> - AI-Powered Fitness Assistant | Powered by Gemini 1.5</p>
+    <p>💪 <strong>CoachBot A</strong> - AI-Powered Fitness Assistant | 
     <p>⚠️ <em>Disclaimer: Always consult with qualified coaches, trainers, or medical professionals before starting any new exercise program.</em></p>
 </div>
 """, unsafe_allow_html=True)
