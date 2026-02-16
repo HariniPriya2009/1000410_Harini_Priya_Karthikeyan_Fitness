@@ -9,7 +9,7 @@ import os
 
 
 st.set_page_config(
-    page_title="CoachBot  - AI Fitness Assistant",
+    page_title="CoachBot  -  Fitness Assistant",
     page_icon="💪",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -83,7 +83,7 @@ except Exception as e:
 
 
 with st.sidebar:
-    st.title("🔧 CoachBot A")
+    st.title("🔧 CoachBot ")
     st.success("✅ API Key configured from secrets")
     
     st.divider()
@@ -956,7 +956,7 @@ else:
         st.divider()
         
         
-        st.subheader("ℹ️ About CoachBot A")
+        st.subheader("ℹ️ About CoachBot ")
         
         st.markdown("""
         **CoachBot ** is an AI-powered personal fitness coaching assistant designed specifically for young athletes (ages 10-25).
@@ -987,7 +987,7 @@ else:
 st.divider()
 st.markdown("""
 <div style='text-align: center; color: #666;'>
-    <p>💪 <strong>CoachBot A</strong> - AI-Powered Fitness Assistant | 
+    <p>💪 <strong>CoachBot </strong> - Fitness Assistant | 
     <p>⚠️ <em>Disclaimer: Always consult with qualified coaches, trainers, or medical professionals before starting any new exercise program.</em></p>
 </div>
 """, unsafe_allow_html=True)
