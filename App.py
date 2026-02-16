@@ -88,13 +88,7 @@ with st.sidebar:
     
     st.divider()
     
-    st.info("⚙️ Model Settings")
-    st.write(f"**Temperature:** {st.session_state.temperature} (Fixed)")
-    st.write("*Consistent, balanced recommendations*")
-    
-    if 'model_name' in st.session_state:
-        st.divider()
-        st.write(f"**Model:** {st.session_state.model_name}")
+
 
 
 if not st.session_state.api_key_configured:
