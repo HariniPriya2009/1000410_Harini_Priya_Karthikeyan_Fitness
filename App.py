@@ -82,11 +82,7 @@ except Exception as e:
     st.session_state.api_key_configured = False
 
 
-with st.sidebar:
-    st.title("🔧 CoachBot ")
-    st.success("✅ API Key configured from secrets")
-    
-    st.divider()
+
     
 
 
