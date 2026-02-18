@@ -2,6 +2,10 @@
 
 https://harinipriya2009.github.io/1000410_Harini_Priya_Karthikeyan_Fitness/
 
+App link:  https://1000410-harini-priya-karthikeyan-fitness-sa.streamlit.app/
+
+Canva link: https://drive.google.com/file/d/1qhWM7QVR3vNclEWcDZEIGC5beJu7ACm_/view?usp=sharing
+
 🚀 Features Overview
 
 CoachBot A offers 11 comprehensive coaching modules covering every aspect of athletic development:
